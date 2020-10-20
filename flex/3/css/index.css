@@ -1,0 +1,77 @@
+body {
+    max-width: 540px;
+    min-width: 32px;
+    margin: 0 auto !important;
+    color: #222;
+    font:12px  Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    background: #f2f2f2;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/*搜索栏 */
+.search-box {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.search-box .search-ipt {
+    position: relative;
+    flex:1;
+    height: 26px;
+    padding-left: 20px;
+    line-height: 26px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+.search-box .search-ipt::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: url('../images/sprite.png') -60px -280px;
+    background-size: 104px 328px;
+}
+.user {
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+    width: 44px;
+    height: 44px;
+ }
+.user span {
+    flex:1;
+ }
+ .user-icon{
+     margin-bottom: 5px;
+ }
+.user-icon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10px;
+    width: 23px;
+    height: 23px;
+    background: url('../images/sprite.png') -59px -194px;
+    background-size: 104px 328px;
+}
