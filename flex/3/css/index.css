@@ -1,6 +1,6 @@
 body {
     max-width: 540px;
-    min-width: 32px;
+    min-width: 320px;
     margin: 0 auto !important;
     color: #222;
     font:12px  Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
@@ -20,6 +20,10 @@ ul {
 a {
     color: #222;
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 /*搜索栏 */
@@ -74,4 +78,98 @@ a {
     height: 23px;
     background: url('../images/sprite.png') -59px -194px;
     background-size: 104px 328px;
+}
+/* local-nav */
+.local-wrapper {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.local-item a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ 
+.local-icon-1 {
+    background:url('../images/localnav_bg.png')  no-repeat 0 0;
+}
+.local-icon-2 {
+    background:url('../images/localnav_bg.png')  no-repeat 0 -32px;
+}
+.local-icon-3 {
+    background:url('../images/localnav_bg.png')  no-repeat 0 -64px;
+}
+.local-icon-4 {
+    background:url('../images/localnav_bg.png')  no-repeat 0 -96px;
+}
+.local-icon-5 {
+    background:url('../images/localnav_bg.png')  no-repeat 0 -128px;
+}
+[class^="local-icon"] {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: 32px auto;
+}
+/* 酒店导航 */
+.hotel-wrapper {
+    display: flex;
+    height: 88px;
+    margin-bottom: 5px;
+}
+.hotel-wrapper .hotel-item:nth-child(1) {
+    background: url('../images/hotel.png') no-repeat bottom  center;
+    background-size: 70%;
+}
+.hotel-item {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.hotel-item a{
+    flex: 1;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.hotel-wrapper:nth-child(1){
+    background: linear-gradient(to right, #fa5e55, #fb964e);
+}
+.hotel-wrapper:nth-child(2){
+    background: linear-gradient(#4c92ed, #53baed);
+}
+.hotel-wrapper:nth-child(3){
+    background: linear-gradient(#37c2a5, #69d45f);
+}
+/*  消费导航 */
+.consumer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background:#fff;
+    padding: 5px;
+}
+
+.consumer-wrapper li {
+    flex: 20%;
+}
+.consumer-wrapper li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.consumer-wrapper .consumer-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background:url('../images/subnav-bg.png') no-repeat 0 0;
+    background-size: 24px auto;
+    margin-top: 10px;
 }
