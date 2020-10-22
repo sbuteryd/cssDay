@@ -143,11 +143,20 @@ img {
     background: linear-gradient(to right, #fa5e55, #fb964e);
 }
 .hotel-wrapper:nth-child(2){
-    background: linear-gradient(#4c92ed, #53baed);
+    background: linear-gradient(to right,#4c92ed, #53baed);
 }
 .hotel-wrapper:nth-child(3){
-    background: linear-gradient(#37c2a5, #69d45f);
+    background: linear-gradient(to right ,#37c2a5, #69d45f);
 }
+.hotel-wrapper .hotel-item:nth-child(2) {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+
+}
+.hotel-wrapper .hotel-item a:nth-child(2) {
+    border-top: 1px solid #fff;
+}
+ 
 /*  消费导航 */
 .consumer-wrapper {
     display: flex;
@@ -172,4 +181,62 @@ img {
     background:url('../images/subnav-bg.png') no-repeat 0 0;
     background-size: 24px auto;
     margin-top: 10px;
+}
+.consumer-wrapper span {
+    font-size: 14px;
+}
+/* hot */
+.hot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    height: 60px;
+    padding: 0 10px;
+    background: #fff;
+}
+.hot h2  {
+    width: 79px;
+    height: 16px;
+    background: url('../images/hot.png') no-repeat 0 -19px;
+    background-size: 79px 58px;
+    font-size: 0;
+}
+.hot a{
+    display: block;
+    position: relative;
+    width: 114px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    border-radius: 50px;
+    background: linear-gradient(to right, #FF506C, #FF6BC6);
+}
+.hot a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform:rotate(45deg)
+}
+/* activity-item */
+.activity-item {
+    display: flex;
+}
+.activity-item img {
+    vertical-align: bottom;
+}
+
+.activity-item:nth-child(2) {
+    border: 1px solid #ccc;
+}
+.activity-item a:nth-child(1){
+    border-right: 1px solid #ccc;
 }
