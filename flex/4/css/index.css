@@ -1,0 +1,49 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* 顶部搜索 */
+
+.search-box {
+    height: 44px;
+}
+.search-ipt {
+    flex:1;
+    height: 26px;
+    line-height: 26px;
+    display: block;
+}
+.search-ipt::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background:url('../images/sprite.png') no-repeat ;
+    background-size: 104px 328px;
+}
+.search-user {
+    margin-left: 10px;
+    width: 44px;
+    height: 44px;
+}
