@@ -5,6 +5,7 @@ body {
     font-size: 12px;
     font-family: Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
     color: #222;
+    background: #f2f2f2;
 }
 
 a {
@@ -26,24 +27,150 @@ ul {
 /* 顶部搜索 */
 
 .search-box {
+    display: flex;
+    align-items: center;
     height: 44px;
+    background: #f6f6f6;
+    
 }
 .search-ipt {
     flex:1;
+    position: relative;
     height: 26px;
+    padding-left: 20px;
     line-height: 26px;
     display: block;
+    border:1px solid #ccc;
 }
 .search-ipt::before {
     content: "";
+    position: absolute;
+    top: 5px;
+    left: 3px;
     display: block;
-    width: 15px;
+     width: 15px;
     height: 15px;
-    background:url('../images/sprite.png') no-repeat ;
+    background:url('../images/sprite.png') no-repeat -60px -279px;
     background-size: 104px 328px;
 }
 .search-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-left: 10px;
     width: 44px;
     height: 44px;
+}
+.user-icon {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background:url('../images/sprite.png') no-repeat -58px -195px;
+    background-size: 104px 328px;
+
+}
+/* 焦点图 */
+.focus img {
+    width: 100%;
+}
+/* 景点导航 */
+.attraction-nav {
+     display: flex;
+     justify-content: space-around;
+     margin-top: 5px;
+     background:#fff;
+     padding:10px;
+     height: 64px;
+     border-radius: 5px;
+
+}
+
+.attraction-item .arraction-icon{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background:pink;
+    background:url('../images/localnav_bg.png') no-repeat;
+    background-size: 32px 160px;
+}
+.attraction-item  a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 酒店导航 */
+.hotel-nav .hotel-box {
+    display: flex;
+    height: 88px;
+    margin-bottom: 5px;
+}
+.item  {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.item  a {
+    flex:1;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+}
+.hotel-box:nth-child(1) {
+    background: linear-gradient(to right,#FA5A55, #FA994D);
+}
+.hotel-box:nth-child(2) {
+    background: linear-gradient(to right,#4c92ee, #53bbed);
+}
+.hotel-box:nth-child(3) {
+    background: linear-gradient(to right,#35c2a8, #69d45d);
+}
+.hotel-box .item:nth-child(2){
+    border-left: 1px solid #fff;
+    border-right:1px solid #fff
+}
+
+.hotel-box .item a:nth-child(2) {    
+    border-top: 1px solid #fff;
+}
+
+.hotel-box .item:nth-child(1){
+    background:url('../images/hotel.png') center bottom no-repeat;
+    background-size: 70%;
+}
+/* 生活导航 */
+.live-nav {
+    display: flex;
+    flex-wrap: wrap;
+    background:#fff;
+    border-radius: 5px;
+}
+
+.live-nav li {
+    flex:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.live-icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/subnav-bg.png) 6px 5px no-repeat;
+    background-size: 24px auto;
+}
+
+/* hot */
+.hot-hd {
+    display: flex;
+    justify-content: space-between;
+}
+.hot-hd h2 {
+    font-size: 0;
+    background:url('../images/hot.png') 79px auto;
+}
+.hot-hd a {
+
 }
