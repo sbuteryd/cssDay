@@ -22,6 +22,10 @@ a {
 ul {
     list-style: none;
 }
+img {
+    display: block;
+    width: 100%;
+}
 
 
 /* 顶部搜索 */
@@ -163,14 +167,69 @@ ul {
 }
 
 /* hot */
+.hot {
+    margin-top: -3px;
+}
 .hot-hd {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 66px;
+    background: #fff;
+    margin-top: 5px;
+    padding: 0 10px;
 }
 .hot-hd h2 {
     font-size: 0;
-    background:url('../images/hot.png') 79px auto;
+    width: 79px;
+    height: 18px;
+    background: url(../images/hot.png) 0 -76px;
+    background-size: 80px 58.5px;
+}
+.sales-hd {
+    display: flex;
+    justify-content: space-between;
 }
 .hot-hd a {
+    position: relative;
+    width: 114px;
+    height: 26.7px;
+    background: linear-gradient(to right,#ff5272, #ff67b8);
+     line-height: 26.7px;
+    color: #fff;
+    padding-left: 5px;
+    font-size: 14px;
+    border-radius: 19px;
+}
+.hot-hd a::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 9px;
+    width: 8px;
+    height:8px;
+    border-top: 2px solid  #fff;
+    border-right: 2px solid #fff;
+    transform:rotate(45deg);
+}
+/* hot-bd */
+.hot-hd {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.item-bd {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-bd a {
+    flex: 1;
+}
 
+.item-bd a:nth-child(1){
+    border-right: 1px solid #eee;
+}
+.item-bd:nth-child(2) a {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
